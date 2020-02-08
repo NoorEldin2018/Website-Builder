@@ -1,0 +1,27 @@
+.categories{
+    ul{
+        display: inline-block;
+        li{
+            list-style: none;
+            a{
+                color: rgba(18,20,22,.9);
+                svg{
+                    height: 10px;
+                     width: 10px;
+                 transition: left .3s linear;
+                    color: rgba(18,20,22,.9);
+                position: relative;
+                 left: 0;
+                }
+            }
+            a:hover{
+                text-decoration: none;
+                color: #329fea;
+            }
+            a:hover svg{
+                fill: #329fea;
+                left: .6vw;
+            }
+        }
+    }
+}
