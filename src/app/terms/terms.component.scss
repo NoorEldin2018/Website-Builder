@@ -1,0 +1,29 @@
+.terms{
+    h2{
+        position: relative;
+    }
+    h2::after{
+        content: "";
+        width: 1044px;
+        height: 2px;
+        background-color: #e0e3e5;
+        position: absolute;
+        left: 0;
+        top: 50px;
+    }
+    .term-text{
+        ol{
+            li{
+                margin-bottom: 1rem !important;
+                span{
+                    color: #66737C !important;
+                }
+            }
+        }
+        p{
+            span{
+                color: #66737C !important;
+            }
+        }
+    }
+}
