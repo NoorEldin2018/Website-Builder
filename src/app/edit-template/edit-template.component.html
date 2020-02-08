@@ -1,0 +1,105 @@
+<div class="text-setting">
+    <div class="setting-header p-3">
+        <span class="text-white">Text Settings</span>
+        <i (click)="closeMenu()" class="far fa-times-circle float-right"></i>
+    </div>
+    <div class="setting-body p-3">
+        <div class="enter-text">
+            <p>Change Text</p>
+            <input type="text" name="" class="text-input">
+        </div>
+        <div class="font">
+            <p>font size</p>
+            <input type="text" name="" class="font-size">
+            <span>px</span>
+        </div>
+        <div class="color-platte mt-3">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+    </div>
+</div>
+<div class="edit">
+    <ul (click)="showMenu()" class="edit-shape">
+        <li>Edit Text</li>
+    </ul>
+</div>
+<section class="about-me">
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="info pt-5">
+                <h1>About Me</h1>
+                <p class="mt-5">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. ​
+                   </p>
+                <button class="readme mt-5"><a routerLink="">Read Me</a></button>
+            </div>
+        </div>
+        <div class="col-6">
+            <img class="img-fluid" src="assets/images/ea71bb_e7959a5be116482b9727a9be900d2d35_mv2_d_5454_3840_s_4_2.jpg"/>
+        </div>
+    </div>
+</div>
+</section>
+<section class="help-you">
+<div class="container">
+    <h1>How I Can Help You</h1>
+</div>
+</section>
+<section class="contact">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-6">
+                <h3  id="contact">Contact</h3>
+                <div class="contact-info">
+                    <p>500 Terry Francois Street</p>
+                    <p>San Francisco, CA 94158</p>
+                    <div class="contact-way py-3">
+                        <p>Tel: 123-456-7890</p>
+                        <p>Fax: 123-456-7890</p>
+                    </div>
+                    <div class="contact-email py-3">
+                        <a routerLink="">info@mysite.com</a>
+                    </div>
+                    
+                    <div class="socials">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                          <label for="">Enter Your Name</label>
+                          <input type="text" name="name" id="" class="form-control" placeholder="Name" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Enter Your Email</label>
+                          <input type="email" name="email" id="" class="form-control" placeholder="Email" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Enter Your Subject</label>
+                          <input type="text" name="subject" id="" class="form-control" placeholder="Subject" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Message</label>
+                          <textarea class="form-control" name="message" placeholder="Message" id="" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="button-submit float-right text-white">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
