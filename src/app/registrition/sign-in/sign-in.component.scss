@@ -1,0 +1,96 @@
+.login {
+  .title {
+    text-align: center;
+
+    h1 {
+      font-weight: normal;
+    }
+
+  }
+
+
+  div.login{
+    > .card {
+      box-shadow: none;
+      > mdb-card-body {
+        > div {
+          > div {
+            > button{
+              border-radius: 50px;
+              color: #3899ec;
+              padding: 10px 50px;
+              box-shadow: inset 0 0 0 1px #3899ec;
+              border: none;
+              transition: all 0.5s ease-in-out;
+              &:hover{
+                background-color: #3899ec;
+                color: #fff;
+              }
+            }
+          }
+          >div{
+            .forget {
+                margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .sign-in-social {
+    .block{
+      height: 100px;
+      width: 100%;
+    }
+    position: relative;
+    &:before{
+      content: "";
+      position: absolute;
+      top: -46px;
+      left: 0;
+      height: 60vh;
+      width: 1px;
+      background-color: #333;
+    }
+    button {
+      display: block;
+      margin-bottom: 20px;
+      width: 220px;
+      height: 36px;
+      border: none;
+      border-radius: 2px;
+      color: #FFF;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      transition: 0.2s ease;
+      cursor: pointer;
+      i{
+        margin-right: 5px;
+      }
+      &.facebook {
+        background: #32508E;
+      }
+
+      &.google {
+        background: #DD4B39;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        transition: 0.2s ease;
+      }
+    }
+  }
+}
+
+/*footer*/
+
+footer{
+  .terms-of-use{
+    text-align: center;
+    font-size: 14px;
+  }
+}
