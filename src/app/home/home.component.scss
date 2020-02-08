@@ -1,0 +1,229 @@
+$mainFont:'Roboto', sans-serif;
+$secondColor:#dfe6e9;
+$secondFont:'Poppins', sans-serif;
+$mainColor:#0554F2;
+$bodyColor:rgba(83, 126, 255,0.2);
+nav{
+    &{
+        background-color: $mainColor;
+        border-bottom: 1px solid rgb(142, 151, 142);
+        font-family: $secondFont;
+        display: flex;
+    }
+    .leftContainer{
+        &{
+            height: 100%;
+        }
+    }
+    .rightContainer{
+        &{
+            height: 100%;
+            position: relative;
+            display: flex;
+            
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right:150px;
+            height: 100%;
+            width: 1px;
+            background-color: white;
+        }
+        ul{
+            list-style: none;
+            li{
+                float: left;
+                padding: 0 5px;
+            }
+            li:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .rightContainerSmall{
+        display: none;
+    }
+}
+
+@media(max-width:550px){
+    nav{
+
+        display: block;
+        .rightContainer{
+            display: none;
+            &::before{
+                content: '';
+                width: 0;
+            }
+            div{
+                a{
+                    margin-left: 0;
+                }
+            }
+            ul{
+                li{
+                    float: none;
+                    margin: 5px 0;
+                }
+            }
+            ul.contacts{
+                &{
+                    padding-left: 0;
+                }
+                li{
+                    float: left;
+                    
+                }
+            }
+        }
+        .displayVanbar{
+            display: block;
+        }
+        .rightContainerSmall{
+            &{
+                display: block;
+            }
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.reservedLocation{
+    height:50px;
+    visibility: hidden;
+}
+
+
+main{
+    background-color: $bodyColor;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    .service{
+        &{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .serviceHeaderContainer{
+            &{
+                position: relative;
+                padding: 6px;
+                background-color:#dde5ff;
+            }
+            .serviceHeader{
+                font-family: $secondFont;
+                color: $mainColor;
+                text-align: center;
+                padding: 5px;
+               
+            }
+            .serviceHeaderBackground{
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                bottom: -3px;
+                right: -3px;
+                z-index: -1;
+                background:linear-gradient(-45deg,#00a8ff,#fff,#fff,#0097e6);
+            }
+        }  
+        
+        
+    }
+    .serviceContainer{
+        &{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .col-md-6{
+            &{
+               
+            }
+            .servucesImg{
+                &{
+                    position: relative;
+                }
+                img{
+                    min-height:90%;
+                }
+            }
+            .serviceDescription{
+                line-height:30px;
+                font-family: $secondFont;
+                color: #00a8ff;
+            }
+        }
+    }
+    
+    
+}
+.testimonial{
+    background-color: $bodyColor;
+}
+.carousel-item{
+    &{
+        background-color: #82ccdd;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        display: inline-block;
+        
+    }
+}
+
+.client .clients-stars i{
+    color:#ffd32a ;
+}
+.client h2{
+    color:#011640;
+    font-family: $mainFont;
+}
+.client p{
+    color:#011640;
+    font-family: $mainFont;
+}
+
+
+.service{
+    &{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .serviceHeaderContainer{
+        &{
+            position: relative;
+            padding: 6px;
+            background-color:#dde5ff;
+        }
+        .serviceHeader{
+            font-family: $secondFont;
+            color: $mainColor;
+            text-align: center;
+            padding: 5px;
+           
+        }
+        .serviceHeaderBackground{
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            bottom: -3px;
+            right: -3px;
+            z-index: -1;
+            background:linear-gradient(-45deg,#00a8ff,#fff,#fff,#0097e6);
+        }
+    }  
+    
+    
+}
