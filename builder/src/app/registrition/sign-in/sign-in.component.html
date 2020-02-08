@@ -1,0 +1,93 @@
+<section class="login">
+  <div class="container">
+    <div class="title">
+      <div class="form">
+        <h1>Log in</h1>
+        <p>New to website ? <a routerLink="/register" data-class="sign-up">Sign Up</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="login">
+          <!--Form without header-->
+          <mdb-card>
+            <mdb-card-body class="mx-4 mt-5 pt-5">
+              <!--Body-->
+              <form [formGroup]="loginForm">
+                <div class="md-form form-group">
+                  <input type="text" id="email" class="form-control" formControlName="email" mdbInput>
+                  <label for="email">Email</label>
+                  <div *ngIf="email.invalid && email.touched">
+                    <div class="text-danger" *ngIf="email.errors?.required">Email is required</div>
+                    <div class="text-danger" *ngIf="email.errors?.email">Email is not valid</div>
+                  </div>
+                </div>
+                <div class="md-form pb-1 form-group">
+                  <input type="password" id="pass" class="form-control" formControlName="pass" mdbInput>
+                  <label for="pass">Your password</label>
+                  <div *ngIf="pass.invalid && pass.touched">
+                    <div class="text-danger" *ngIf="pass.errors?.required">Password is required</div>
+                    <div class="text-danger" *ngIf="pass.errors?.pattern">Password should start with Captail and max length 8</div>
+                  </div>
+                </div>
+              </form>
+
+              <!--Grid row-->
+              <div class="row d-flex align-items-center mb-4">
+
+                <!--Grid column-->
+                <div class="col-md-3 col-md-6">
+                  <button [disabled]="loginForm" type="button" mdbBtn>Login</button>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <p class="forget font-small d-flex justify-content-end">
+                    <a routerLink="../forget-password" class="blue-text ml-1">
+                    Forget Your Password ?
+                    </a>
+                  </p>
+                </div>
+                <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+            </mdb-card-body>
+          </mdb-card>
+          <!--Section: Live preview-->
+        </div>
+      </div>
+      <div class="col-md-6">
+
+        <div class="sign-in-social mt-5 px-5">
+          <div class="block"></div>
+          <button class="social-signin facebook"> <i class="fab fa-facebook-f"></i> Log in with facebook</button>
+          <button class="social-signin google"><i class="fab fa-google-plus-g" aria-hidden="true"></i> Log in with
+            Google+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!---Footter---->
+<footer class=" mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <div class="terms-of-use" >
+          * By signing up, you agree to our
+           <a href="https://www.wix.com/about/terms-of-use" target="_blank">Terms of Use</a>
+           and to receive Wix emails &amp; updates and acknowledge that you read our
+           <a href="https://www.wix.com/about/privacy" target="_blank">Privacy Policy</a>.
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+</footer>
