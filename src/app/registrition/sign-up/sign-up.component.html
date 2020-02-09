@@ -1,4 +1,4 @@
-<section class="sign-up">
+<section class="sign-up mt-5">
   <div class="container">
     <div class="title">
       <div class="form">
@@ -14,14 +14,14 @@
 
             <mdb-card-body class="mx-4">
               <!--Body-->
-              <form [formGroup]="signupForm">
+              <form [formGroup]="signupForm" (ngSubmit)="signup()">
 
 
                 <div class="md-form">
                   <input type="text" id="userName" class="form-control" formControlName="userName" mdbInput>
                   <label for="userName">User Name</label>
                   <div *ngIf="userName.invalid && userName.touched">
-                    <div class="text-danger" *ngIf="userName.errors?.required">User name is required</div>
+                    <div class="text-danger" *ngIf="userName.errors.required">User name is required</div>
                   </div>
                 </div>
 
@@ -29,36 +29,35 @@
                   <input type="text" id="email" class="form-control" formControlName="email" mdbInput>
                   <label for="email">Email</label>
                   <div *ngIf="email.invalid && email.touched">
-                    <div class="text-danger" *ngIf="email.errors?.required">Email is required</div>
-                    <div class="text-danger" *ngIf="email.errors?.email">Email is not valid</div>
+                    <div class="text-danger" *ngIf="email.errors.required">Email is required</div>
+                    <div class="text-danger" *ngIf="email.errors.email">Email is not valid</div>
                   </div>
                 </div>
 
                 <div class="md-form">
-                  <input type="password" id="pass" class="form-control" formControlName="pass" mdbInput>
-                  <label for="pass">Your password</label>
-                  <div *ngIf="pass.invalid && pass.touched">
-                    <div class="text-danger" *ngIf="pass.errors?.required">Password is required</div>
-                    <div class="text-danger" *ngIf="pass.errors?.pattern">Password should start with Captail and max length 8</div>
+                  <input type="password" id="pass" class="form-control" formControlName="password" mdbInput>
+                  <label for="password">Your password</label>
+                  <div *ngIf="password.invalid && password.touched">
+                    <div class="text-danger" *ngIf="password.errors.required">Password is required</div>
+                    <div class="text-danger" *ngIf="password.errors.pattern">Password should start with Captail and max length 8</div>
                   </div>
                 </div>
 
                 <div class="md-form pb-1">
-                  <input type="password" id="repass" class="form-control" formControlName="repass" mdbInput>
+                  <input type="password" id="repass" class="form-control" formControlName="confirmPassword" mdbInput>
                   <label for="repass">Re-password</label>
-                  <div *ngIf="repass.invalid && pass.touched">
-                    <div class="text-danger" *ngIf="repass.errors?.required">Re-Password is required</div>
-                    <div class="text-danger" *ngIf="password !== repass">Don't Match Password</div>
+                  <div *ngIf="confirmPassword.invalid && confirmPassword.touched">
+                    <div class="text-danger" *ngIf="confirmPassword.errors.required">Re-Password is required</div>
+                    <div class="text-danger" *ngIf="password.errors.pattern">Password should start with Captail and max length 8</div>
+                    <div class="text-danger" *ngIf="confirmPassword.errors?.mustMatch">Don't Match Password</div>
                   </div>
                 </div>
-              </form>
-
-              <!--Grid row-->
+                 <!--Grid row-->
               <div class="row d-flex align-items-center mb-4">
 
                 <!--Grid column-->
                 <div class="col-md-3 col-md-6">
-                  <button  type="submit" mdbBtn>Sign up</button>
+                  <button routerLink="/home"  type="submit" [disabled]="signupForm.invalid" mdbBtn>Sign up</button>
                 </div>
                 <!--Grid column-->
 
@@ -69,12 +68,15 @@
 
               </div>
               <!--Grid row-->
+              </form>
+
+             
             </mdb-card-body>
           </mdb-card>
           <!--Section: Live preview-->
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 border-left">
 
         <div class="sign-up-social mt-5 px-5">
           <div class="block"></div>
@@ -87,7 +89,7 @@
   </div>
 </section>
 <!---Footter---->
-<footer>
+<footer class=" mt-5 pt-3">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
