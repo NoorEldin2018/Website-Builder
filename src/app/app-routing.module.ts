@@ -5,6 +5,7 @@ import { CategoryTemplatesComponent } from './category-templates/category-templa
 import { EditTemplateComponent } from './edit-template/edit-template.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
+import { MysitesComponent } from './mysites/mysites.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'categorytemplates',component:CategoryTemplatesComponent},
   {path:'editTemplate',component:EditTemplateComponent},
   {path:'categories',component:CategoriesComponent},
+  {path:'sites',component:MysitesComponent},
   {path: 'register',loadChildren: './registrition/registrition.module#RegistritionModule'}
 ];
 

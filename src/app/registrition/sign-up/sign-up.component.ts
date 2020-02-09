@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { Validators, FormGroup, FormControl,FormBuilder } from '@angular/forms';
 import * as $ from 'jquery';
-
+// import custom validator to validate that password and confirm password fields match
+import { MustMatch } from '../../helpers/must-match.validator';
 
 @Component({
   selector: 'app-sign-up',
@@ -9,17 +10,23 @@ import * as $ from 'jquery';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+  signupForm:FormGroup;
+ 
 
-  signupForm = new FormGroup({
-    userName: new FormControl("",[Validators.required]),
-    email: new FormControl("",[Validators.email]),
-    pass: new FormControl("",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)]),
-    repass: new FormControl("",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)]),
-  });
-
-  constructor() { }
+  constructor(public _fb:FormBuilder) { }
 
   ngOnInit() {
+    this.signupForm = this._fb.group({
+      userName:["",[Validators.required]],
+      email: ["",[Validators.required,Validators.email]],
+      password: ["",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)]],
+      confirmPassword: ["",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)]],
+    },{
+      validator: MustMatch('password', 'confirmPassword')
+    });
+  }
+
+  signup(){
 
   }
 
@@ -31,12 +38,12 @@ export class SignUpComponent implements OnInit {
     return this.signupForm.get("email");
   }
 
-  get pass(){
-    return this.signupForm.get("pass");
+  get password(){
+    return this.signupForm.get("password");
   }
 
-  get repass(){
-    return this.signupForm.get("repass");
+  get confirmPassword(){
+    return this.signupForm.get("confirmPassword");
   }
 
 }

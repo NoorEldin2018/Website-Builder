@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import{Router} from '@angular/router';
 import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-sign-in',
@@ -10,18 +11,18 @@ import * as $ from 'jquery';
 })
 export class SignInComponent implements OnInit {
 
-  loginForm = new FormGroup({
-    email: new FormControl("",[Validators.email]),
-    pass: new FormControl("",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)])
-  });
+  loginForm:FormGroup;
 
-  constructor(public _router:Router) { }
+  constructor(public _router:Router,public _fb:FormBuilder) { }
   login(){
-    console.log("a7a");
     this._router.navigate(["/categories"]);
   }
 
   ngOnInit() {
+    this.loginForm = this._fb.group({
+      email: ["",[Validators.required,Validators.email]],
+      password: ["",[Validators.required,Validators.pattern(/^[A-Z][0-9 a-z]{5,8}$/)]],
+    });
   }
 
 
@@ -29,8 +30,8 @@ export class SignInComponent implements OnInit {
     return this.loginForm.get("email");
   }
 
-  get pass(){
-    return this.loginForm.get("pass");
+  get password(){
+    return this.loginForm.get("password");
   }
 
 }

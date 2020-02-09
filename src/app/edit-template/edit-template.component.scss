@@ -28,7 +28,7 @@
         .color-platte{
             display: grid;
             grid-template-areas: "color color color color";
-            > div {
+            .color,.border-color,.text-color {
                 height: 20px;
                 width: 20px;
                 background-color: orange;
@@ -36,6 +36,7 @@
                 margin: 10px auto;
                 border: 1px solid black;
             }
+
         }
     }
 }
@@ -72,7 +73,41 @@
         }
     }
 }
-
+.add-field{
+    @extend .edit;
+    .add-shape{
+        @extend .edit-shape;
+    }
+}
+.field-setting{
+    @extend .text-setting;
+    .add-fields{
+        >div{
+            cursor: pointer;
+            border-top:1px solid gray;
+            border-bottom:1px solid gray;
+        }
+    }
+}
+.edit-background{
+    @extend .edit;
+    ul{
+        li{
+            padding: 2px;
+        }
+    }
+   
+}
+.edit-button{
+    @extend .edit;
+}
+.button-setting{
+    @extend .text-setting;
+    top: 50px;
+}
+.background-setting{
+    @extend .text-setting;
+}
 .info{
     h1{
         position: relative;
@@ -90,9 +125,9 @@
     }
     .readme{
         background-color: rgba(0, 0, 0, 1);
-    border: 2px solid rgba(0, 0, 0, 1) ;
-    height: 40px;
-    width: 129px;
+        border: 2px solid rgba(0, 0, 0, 1) ;
+        height: 40px;
+        width: 129px;
     a{
         color: #FFF;
     }
@@ -105,6 +140,88 @@
     height: 800px;
     background-attachment: fixed;
     width: 100%;
+    padding: 50px 0;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #4caf5059;
+    }
+    h1{
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:before{
+            content:'';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: #000;
+            top: -20px;
+           
+        }
+    }
+    .help-edit{
+        border: 5px solid #000;
+        text-align: center;
+        padding: 25px 0;
+        position: relative;
+        h4{
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        p{
+            position: relative;
+            &:after{
+                content: "";
+                position: absolute;
+                width: 45%;
+                height: 2px;
+                background-color: #000;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .help-info{
+            margin-top: 50px;
+            span{
+                display: block;
+                margin-bottom: 20px;
+            }
+            a{
+                display: inline-block;
+                color: #000;
+                background-color: #00a192;
+                padding: 10px 40px;
+                transition: all 0.5s ease-in-out;
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .more-services{
+        position: relative;
+        a{
+            display: inline-block;
+            color: #fff;
+            background-color: #000;
+            padding: 10px 40px;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            border: 3px solid #000;
+            &:hover{
+                background-color: transparent;
+                color: #000;
+            }
+        }
+    }
 }
 .contact{
     background-color: rgba(87, 187, 191, 1);
@@ -140,15 +257,19 @@
 }
 .contact-form{
     form{
-        input,textarea{
-            background-color: transparent !important;
-            border:2px solid #000 !important;
+        .form-group{
+            input,textarea{
+                background-color: transparent !important;
+                border:2px solid #000 !important;
+            }
         }
+
         .button-submit{
             background-color: rgba(0, 0, 0, 1);
             border: 2px solid rgba(0, 0, 0, 1) ;
             height: 40px;
             width: 129px;
+            color: #FFF;
         }
     }
 
