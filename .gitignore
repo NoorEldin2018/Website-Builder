@@ -7,7 +7,7 @@
 # Only exists if Bazel was run
 /bazel-out
 
-# dependencies
+# dependenci es
 /node_modules
 
 # profiling files
