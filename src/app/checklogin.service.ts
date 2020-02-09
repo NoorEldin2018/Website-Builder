@@ -5,5 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class CheckloginService {
+  loggedIn:boolean;
+  route: string;
 
 }
