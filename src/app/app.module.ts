@@ -13,6 +13,7 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RegistritionModule } from './registrition/registrition.module';
 import { HomeComponent } from './home/home.component';
+import { MysitesComponent } from './mysites/mysites.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     EditTemplateComponent,
     CategoriesComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    MysitesComponent
   ],
   imports: [
     BrowserModule,

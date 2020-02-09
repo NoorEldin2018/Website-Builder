@@ -30,33 +30,159 @@
         <li>Edit Text</li>
     </ul>
 </div>
-<section class="about-me">
-<div class="container">
-    <div class="row">
-        <div class="col-6">
-            <div class="info pt-5">
-                <h1>About Me</h1>
-                <p class="mt-5">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. ​
-                   </p>
-                <button class="readme mt-5"><a routerLink="">Read Me</a></button>
-            </div>
-        </div>
-        <div class="col-6">
-            <img class="img-fluid" src="assets/images/ea71bb_e7959a5be116482b9727a9be900d2d35_mv2_d_5454_3840_s_4_2.jpg"/>
+<div class="edit-background">
+    <ul (click)="showBackgroundMenu()" class="edit-shape">
+        <li>Edit Background</li>
+    </ul>
+</div>
+<div class="background-setting">
+    <div class="setting-header p-3">
+        <span class="text-white">Section Settings</span>
+        <i (click)="closeBackgroundMenu()" class="far fa-times-circle float-right"></i>
+    </div>
+    <div class="setting-body p-3">
+        <div class="color-platte mt-3">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
         </div>
     </div>
 </div>
+<div class="add-field">
+    <ul (click)="showAddFieldMenu()" class="add-shape">
+        <li>Add Field</li>
+    </ul>
+</div>
+<div class="field-setting">
+    <div class="setting-header p-3">
+        <span class="text-white">Field Settings</span>
+        <i (click)="closeFieldMenu()" class="far fa-times-circle float-right"></i>
+    </div>
+    <div class="setting-body add-fields px-2">
+        <div class="first-name my-5">
+            <i class="fas fa-user"></i>
+            <span class="p-3" (click)="addfirstname()">First Name</span>
+        </div>
+        <div class="second-name my-5 ">
+            <i class="fas fa-user"></i>
+            <span class="p-3" (click)="addsecondname()">Second Name</span>
+        </div>
+       <div class="password my-5">
+        <i class="fas fa-key"></i>
+        <span class="p-3" (click)="addpassword()">Password</span>
+       </div>
+        
+    </div>
+</div>
+
+<!-- edit button-->
+<div class="edit-button">
+    <ul (click)="showEditButtonMenu()" class="edit-shape">
+        <li>Edit Button</li>
+    </ul>
+</div>
+
+<div class="button-setting">
+    <div class="setting-header p-3">
+        <span class="text-white">Button Settings</span>
+        <i (click)="closeEditButtonMenu()" class="far fa-times-circle float-right"></i>
+    </div>
+    <div class="setting-body p-3">
+        <div class="enter-text">
+            <p>Change Button Setting</p>
+            <input type="text" name="" class="button-input">
+        </div>
+        <div class="font">
+            <p>font size</p>
+            <input type="text" name="" class="font-size-button">
+            <span>px</span>
+        </div>
+        <p class="pt-3">Change Button Color</p>
+        <div class="color-platte mt-3">
+           
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+        </div>
+        <p class="pt-3">Change Border Color</p>
+        <div class="color-platte mt-3">
+           
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+            <div class="border-color"></div>
+        </div>
+        <p class="pt-3">Change Text Color</p>
+        <div class="color-platte mt-3"> 
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+            <div class="text-color"></div>
+        </div>
+    </div>
+</div>
+<!--end edit button-->
+<section class="about-me pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="info pt-5">
+                    <h1>About Me</h1>
+                    <p class="mt-5">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click
+                        “Edit Text” or double click me to add your own content and make changes to the font. Feel free
+                        to drag and drop me anywhere you like on your page. ​
+                    </p>
+                    <button class="readme mt-5"><a routerLink="">Read Me</a></button>
+                </div>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid"
+                    src="assets/images/ea71bb_e7959a5be116482b9727a9be900d2d35_mv2_d_5454_3840_s_4_2.jpg" />
+            </div>
+        </div>
+    </div>
 </section>
 <section class="help-you">
-<div class="container">
-    <h1>How I Can Help You</h1>
-</div>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>How I Can <br/>Help You</h1>
+        <div class="help-edit">
+            <h4>ONE ON ONE COACHING</h4>
+            <p>I'm a tagline. Click here to add your own text and edit me.</p>
+            <div class="help-info">
+                <span>1 hr</span>
+                <span>$70</span>
+                <a riuterLink="">Book It</a>
+            </div>
+        </div>
+        <div class="more-services text-center mt-5">
+            <a routerLink="">More services</a>
+        </div>
+    </div>
 </section>
 <section class="contact">
     <div class="container py-5">
         <div class="row">
             <div class="col-6">
-                <h3  id="contact">Contact</h3>
+                <h3 id="contact">Contact</h3>
                 <div class="contact-info">
                     <p>500 Terry Francois Street</p>
                     <p>San Francisco, CA 94158</p>
@@ -67,37 +193,41 @@
                     <div class="contact-email py-3">
                         <a routerLink="">info@mysite.com</a>
                     </div>
-                    
+
                     <div class="socials">
                         <i class="fab fa-facebook-f"></i>
                         <i class="fab fa-twitter"></i>
                         <i class="fab fa-instagram"></i>
                         <i class="fab fa-youtube"></i>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="col-6">
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                          <label for="">Enter Your Name</label>
-                          <input type="text" name="name" id="" class="form-control" placeholder="Name" aria-describedby="helpId">
+                            <label for="">Enter Your Name</label>
+                            <input type="text" name="name" id="" class="form-control" placeholder="Name"
+                                aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                          <label for="">Enter Your Email</label>
-                          <input type="email" name="email" id="" class="form-control" placeholder="Email" aria-describedby="helpId">
+                            <label for="">Enter Your Email</label>
+                            <input type="email" name="email" id="" class="form-control" placeholder="Email"
+                                aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                          <label for="">Enter Your Subject</label>
-                          <input type="text" name="subject" id="" class="form-control" placeholder="Subject" aria-describedby="helpId">
+                            <label for="">Enter Your Subject</label>
+                            <input type="text" name="subject" id="" class="form-control" placeholder="Subject"
+                                aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                          <label for="">Message</label>
-                          <textarea class="form-control" name="message" placeholder="Message" id="" rows="3"></textarea>
+                            <label for="">Message</label>
+                            <textarea class="form-control" name="message" placeholder="Message" id=""
+                                rows="3"></textarea>
                         </div>
-                        <button type="submit" class="button-submit float-right text-white">Submit</button>
-                      </form>
+                        <button type="submit" class="button-submit float-right">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
