@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   usersite:boolean;
   constructor(location: Location, router: Router) {
     router.events.subscribe((val) => {
-      if(location.path() == '/sites'||location.path() == '/editTemplate'){
+      if(location.path() == '/sites'||location.path() == '/editTemplate' ||location.path() == '/categorytemplates' ||location.path() == '/categories'  ){
        this.loggedIn=true;
       }else{
         this.loggedIn=false;
@@ -24,12 +24,12 @@ export class NavbarComponent implements OnInit {
       }else{
         this.template=false;
       }
-      if(location.path() == '/sites' || location.path() == '/editTemplate'){
+      if(location.path() == '/sites' || location.path() == '/editTemplate' ||location.path() == '/categorytemplates' ||location.path() == '/categories'){
         this.usersite=true;
       }else{
         this.usersite=false;
       }
-      if(location.path() == '/sites'||location.path() == '/editTemplate'){
+      if(location.path() == '/sites'||location.path() == '/editTemplate' ||location.path() == '/categorytemplates' ||location.path() == '/categories'){
         this.userlogin=false;
       }else{
         this.userlogin=true;
