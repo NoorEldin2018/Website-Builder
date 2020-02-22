@@ -274,3 +274,53 @@
     }
 
 }
+
+.isSelected{
+    background-color: orange;
+    border: 1px solid #09c;
+   
+}
+#editMenuStyle{
+    z-index: 500;
+    display: none;
+    width: 250px;
+    box-shadow: 0 0 15px #09c;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    .closeEdit{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #09c;
+    }
+    .colorEdit{
+        div{
+            height: 35px;
+            #colorEdit{
+                opacity: 0;
+                z-index: 2;
+                width:70px;
+                padding: 10px 30px;
+                height: 35px;
+                background: linear-gradient(45deg,#1abc9c,#16a085,#2ecc71,#27ae60);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+        
+            }
+            #colorEditView{
+                width:70px;
+                height: 35px;
+                background: linear-gradient(45deg,#1abc9c,#16a085,#2ecc71,#27ae60);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 1;
+                
+            }
+        }
+    }
+}

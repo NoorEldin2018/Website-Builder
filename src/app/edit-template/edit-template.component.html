@@ -1,4 +1,4 @@
-<div class="text-setting">
+<!-- <div class="text-setting">
     <div class="setting-header p-3">
         <span class="text-white">Text Settings</span>
         <i (click)="closeMenu()" class="far fa-times-circle float-right"></i>
@@ -79,9 +79,9 @@
         
     </div>
 </div>
-
+ -->
 <!-- edit button-->
-<div class="edit-button">
+<!-- <div class="edit-button">
     <ul (click)="showEditButtonMenu()" class="edit-shape">
         <li>Edit Button</li>
     </ul>
@@ -104,7 +104,7 @@
         </div>
         <p class="pt-3">Change Button Color</p>
         <div class="color-platte mt-3">
-           
+
             <div class="color"></div>
             <div class="color"></div>
             <div class="color"></div>
@@ -116,7 +116,7 @@
         </div>
         <p class="pt-3">Change Border Color</p>
         <div class="color-platte mt-3">
-           
+
             <div class="border-color"></div>
             <div class="border-color"></div>
             <div class="border-color"></div>
@@ -127,7 +127,7 @@
             <div class="border-color"></div>
         </div>
         <p class="pt-3">Change Text Color</p>
-        <div class="color-platte mt-3"> 
+        <div class="color-platte mt-3">
             <div class="text-color"></div>
             <div class="text-color"></div>
             <div class="text-color"></div>
@@ -138,8 +138,35 @@
             <div class="text-color"></div>
         </div>
     </div>
-</div>
+</div> -->
 <!--end edit button-->
+
+
+
+<div id="editMenuStyle" class=" text-center m-5 p-4 ">
+    <span class="closeEdit" (click)="hideEditContainer()"><i class="fa fa-times " aria-hidden="true"></i></span>
+    <label class="text-center text-primary font-weight-bolder">Edit List</label>
+    <hr>
+    <div class="fontEdit">
+        <label for="fontEdit" class="text-info font-weight-bold">Font Size</label>
+        <input type="number" id="fontEdit" class="form-control w-75 mx-auto" placeholder="Font Size ....">
+    </div>
+    <hr>
+    <div class="colorEdit">
+        <label for="colorEdit" class="text-info font-weight-bold">Font Color</label>
+
+        <div class="position-relative">
+            <input type="color" id="colorEdit" class=" w-25">
+            <div id="colorEditView" class="rounded-pill mx-auto"></div>
+
+        </div>
+    </div>
+    <hr>
+    <div class="editText">
+        <label for="editText" class="text-info font-weight-bold">Edit Text</label>
+        <input type="text" class="w-75 mx-auto form-control" placeholder="Enter New Text Here ..">
+    </div>
+</div>
 <section class="about-me pt-5">
     <div class="container">
         <div class="row">
@@ -150,7 +177,7 @@
                         “Edit Text” or double click me to add your own content and make changes to the font. Feel free
                         to drag and drop me anywhere you like on your page. ​
                     </p>
-                    <button class="readme mt-5"><a routerLink="">Read Me</a></button>
+                    <button class="readme mt-5"><a>Read Me</a></button>
                 </div>
             </div>
             <div class="col-6">
@@ -163,7 +190,7 @@
 <section class="help-you">
     <div class="overlay"></div>
     <div class="container">
-        <h1>How I Can <br/>Help You</h1>
+        <h1>How I Can <br />Help You</h1>
         <div class="help-edit">
             <h4>ONE ON ONE COACHING</h4>
             <p>I'm a tagline. Click here to add your own text and edit me.</p>
@@ -174,7 +201,7 @@
             </div>
         </div>
         <div class="more-services text-center mt-5">
-            <a routerLink="">More services</a>
+            <a>More services</a>
         </div>
     </div>
 </section>
@@ -191,7 +218,7 @@
                         <p>Fax: 123-456-7890</p>
                     </div>
                     <div class="contact-email py-3">
-                        <a routerLink="">info@mysite.com</a>
+                        <a>info@mysite.com</a>
                     </div>
 
                     <div class="socials">
